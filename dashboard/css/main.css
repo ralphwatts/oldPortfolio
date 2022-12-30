@@ -1,0 +1,146 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#main{
+	width: 100%;
+	height: 100%;
+}
+
+.header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1002;
+	background:none repeat scroll 0 0 #ffd777;
+	border-bottom: 1px solid #c9aa5f;
+	min-height: 60px;
+	padding: 0 15px;
+}
+
+.sidebar-toggle{
+	float: left;
+	margin-top: 20px;
+	padding-right: 15px;
+}
+
+a.logo{
+	color: #fff;
+	float: left;
+	font-size: 20px;
+	margin-top: 15px;
+	text-transform: uppercase;
+}
+
+.notify{
+	float: left;
+	margin-left: 92px;
+	margin-top: 15px;
+}
+
+.notify .badge{
+	position: absolute;
+	right: -10px;
+	top: -10px;
+}
+
+a.logout{
+	color: #f2f2f2;
+	font-size: 12px;
+	margin:15px 15px 0 0;
+	padding: 5px 15px;
+	border-radius: 4px;
+	border: 1px solid #6fcc32;
+	background:none repeat scroll 0 0 #68dff0;
+}
+
+ul.nav li a{
+	border:1px solid #666;
+	border-radius: 4px;
+	color: #666;
+	font-size: 16px;
+	margin-right: 15px;
+	padding: 2px 6px;
+}
+
+p.green{
+	background-color: #68dff0;
+	color: #fff;
+	border-radius: 4px 4px 0 0;
+	padding: 10px;
+}
+
+.dropdown-menu.extended{
+	width: 235px;
+	top: 42px;
+	border-radius: 4px;
+	padding: 0;
+}
+
+.notify-arrow{
+	border-style: solid;
+	border-width: 0 9px 9px;
+	left: 7px;
+	position: absolute;
+	margin-top: 10px;
+	top: -18px;
+}
+
+.notify-green{
+	border-bottom-color: #68dff0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: #68dff0;
+}
+
+#sidebar{
+	background-color: #424a5d;
+	width: 210px;
+	height: 100%;
+	position: fixed;
+	padding-top: 75px;
+
+}
+
+ul{
+	padding: 0;
+}
+
+li.sub-menu{
+	margin:0 10px 5px;
+}
+
+li.sub-menu a{
+	color: #8eb2b7;
+	display: block;
+	font-size: 12px;
+	padding:15px 0 15px 10px;
+	transition: all .3s ease;
+	text-decoration: none;
+}
+
+li.sub-menu a.active, 
+li.sub-menu a:hover,
+li.sub-menu a:focus{
+	background-color: #68dff0;
+	color: #fff;
+}
+
+ul.sub li{
+	padding-left: 32px;
+	margin: 0;
+}
+
+#video1{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	background-size: cover;
+	padding-left: 210px;
+	z-index: -100;
+}

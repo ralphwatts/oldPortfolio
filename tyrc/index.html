@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Brain Exercise</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <section class="one">
+        <span data-toggle="modal" data-target=".bs-example-modal-lg" class="head-text">
+        <h1 class="beta uppercase montserrat regular line-after-heading">
+            Test Your Recall
+        </h1>
+        <h2 class="delta cardo regular italic addTo sub-head">
+            A Memory Exercise
+        </h2>
+            </span>
+        <div class="wrapper">
+            <div ng-app="lists">
+                <div class="container" ng-controller="PatientController">
+                    <div class="row boat">
+                        <div ng-repeat="alert in alerts" class="alert alert-info alert-dismissible" role="alert" id="alert">&#43; 1</div>
+                        <div class="col-sm-6" style="min-height: 180px">
+                            <h2 class="beta montserrat regular">
+                                <!--<input placeholder="List Name" style="background:none;width: 120px">-->
+                                List
+                            </h2>
+                            <!--<a ng-click="deleteAllPatients($index)" class="trash-all" data-toggle="tooltip" data-placement="top" title="Delete List">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i></a>-->
+                            <span ng-show="patientList.length == 0" class="white-text">(No items to show!)</span>
+                            <table class="table table-bordered table-striped" id="container2">
+                                <tr ng-repeat="patient in patientList" class="patient">
+                                    <td ng-click="showPatientDetails(patient)" class="lato">{{patient.name}} </td>
+                                    <td>
+                                        <a ng-click="deletePatient($index)" class="delete-x">
+                                            &#10005;</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--<div ng-cloak class="col-sm-6 patient-show-hide" ng-show="patientSelected != undefined">
+                            <table class="table table-bordered table-striped" style="width: 300px">
+                                <tr>
+                                    <td>{{patientDisplayed.name}}. {{patientDisplayed.birthdate}}</td>
+                                </tr>
+                            </table>
+                        </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 class="delta vollkorn regular italic addTo margin-zero">
+                                Add to List
+                            </h2>
+                            <div class="input-group">
+                                <input class="form-control lato" ng-model="newPatient.name" placeholder="Item" />
+                            </div>
+                            <!--<div class="input-group">
+                                <input class="form-control" ng-model="newPatient.lastname" placeholder="Last name" />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control lato" ng-model="newPatient.birthdate" placeholder="Details (optional)" />
+                            </div>-->
+                            <button ng-click="addPatient()" class="btn btn-success beta montserrat regular addPatient">Add</button>
+                            <input type="button" id="btnSave" class="btn btn-warning beta montserrat regular" value="&#xf030;" data-toggle="tooltip" data-placement="right" title="Screenshot Your List" />
+                            <a ng-click="deleteAllPatients($index)" class="trash-all btn btn-danger beta montserrat regular" data-toggle="tooltip" data-placement="right" title="Delete List" style="float:none">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <button type="button" class="help-top" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="beta montserrat uppercase">Help</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div onClick="window.location.reload()" class="refresh" data-toggle="tooltip" data-placement="left" title="Refresh List"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i></div>
+        <!--<a href="about.html" class="about" data-toggle="tooltip" data-placement="left" title="Help"><i class="fa fa-question" aria-hidden="true"></i></a>-->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal Content: begins -->
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header no-borders">
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                        <h4 class="modal-title lato" id="gridSystemModalLabel">How It Works</h4>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <p class="body-message centered lato"><strong>Make a list</strong> of grocery items, things to do, or anything else that comes to mind.<!--and memorize it. An hour or so later, see how many items you can recall. Make items on the list as challenging as possible for the greatest mental stimulation.--><br><br>
+                            After you make your list, open a new tab, minimize the page, step away from your device or <a href="" >take a screenshot</a> of your list. Whatever you do, take an hour or so and come back to the list and see how many items you can remember.<br><br>
+                            Repeat the exercise as frequent as possible for best results.
+                            <small>*This is an exercise meant to strengthen brain function and boost memory. Experts recommend sticking to brain training that involves real-world activities, as this is intended for. Challenge yourself, make the list harder to remember the better you get at the exercise.</small></p>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer no-borders">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+                <!-- Modal Content: ends -->
+
+            </div>
+
+        </div>
+
+        <div class="arrow bounce">
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/plugins.js"></script>
+</body>
+
+</html>

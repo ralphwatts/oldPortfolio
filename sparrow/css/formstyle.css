@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*** Button Color ***/
+div.formbox .button {
+
+  background: #6a6a6a; /* This changes the color of the button  */
+    color: white;
+
+ }
+div.formbox {
+  width:100%;
+  max-width: 500px;
+  margin: 0 auto;
+  }
+
+div.formbox h1 {
+  font-size: 18px;
+  margin:0;
+  text-transform: uppercase;
+  padding: 5px 0 5px 5px;
+  border-bottom: 1px solid #161712;
+  border-top: 0px solid #161712; }
+
+div.formbox label {
+  width: 100%;
+  display: block;
+  color: white;
+  border-top: 0px solid #262626;
+  padding: 10px 0 10px 0; }
+
+div.formbox label span {
+  display: block;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+    float: left;
+  width: 100px;
+  text-align: right;
+  padding: 5px 20px 0 0; }
+
+div.formbox .input_text {
+  padding: 10px;
+  width:100%;
+  box-sizing:border-box;
+  max-width: 300px;
+  background: #f0f0f0;
+  border-color: #171717 #333333 #171717 #333333;
+  border-style:double;
+  border-width:1px;
+ }
+ 
+div.formbox .input_textdate {
+  padding: 10px;
+  background: #f0f0f0;
+  border-color: #171717 #333333 #171717 #333333;
+  border-style:double;
+  border-width:1px;
+ } 
+ 
+
+div.formbox .message {
+  padding: 10px;
+  width:100%;
+  max-width: 280px;
+  background: #f0f0f0;
+  border-color: #171717 #333333 #171717 #333333;
+  border-style:double;
+  border-width:1px;
+  overflow: hidden;
+  min-height: 80px; }
+
+  
+div.formbox .button {
+	text-align: center;
+	color: #fff;
+	background: #111;
+	padding: 10px;
+	margin: 20px auto 0px;
+	display: block;
+	width: 112px;
+	text-decoration: none;
+	border: 2px solid #111;
+	transition: all ease-in-out .3s;
+	font-size: 16px;
+}
+div.formbox .button:hover {
+	background: #F0EFEE;
+	color: #111;
+	border: 2px solid #111;
+}
+
+#error {
+	color:red;
+	font-size:12px;
+	display:none;
+	padding:15px 0 5px 30px;
+}
+.formContact{
+	float: right;
+	margin: 5px 50px 0 10px;
+}
+.formContact label {
+  width: 100%;
+  display: block;
+  padding: 5px 0 3px 0; }
+
+.formContact label span {
+  display: block;
+  color: #053853;
+  font-size: 12px;
+  width: 100px;
+  text-align: right;
+  padding: 5px 20px 0 0; }
+  
+.formContact .input_text {
+  padding: 5px;
+  width: 200px;
+  background: #aeaeae;
+  border-bottom: 1px double #171717;
+  border-top: 1px double #171717;
+  border-left: 1px double #333333;
+  border-right: 1px double #333333; }
+
+.formContact .message {
+  padding: 3px;
+  width: 350px;
+  background: #aeaeae;
+  border-bottom: 1px double #171717;
+  border-top: 1px double #171717;
+  border-left: 1px double #333333;
+  border-right: 1px double #333333;
+  overflow: hidden;
+  height: 120px; } 
+ 
+.contactheader{ width: 200px; float: left;} 
+  
+#emailForm .formbox .confirm {
+	display: none;
+}
+
+.confirm {
+	display: none;
+}
+/*here is the side form code  */
+form, form fieldset input, form fieldset textarea, form label {
+	font-family: Helvetica, Arial;
+	font-size: 12pt;
+}
+form p { position: relative; margin: 10px 0; font-size: 12pt;}
+form p label { position: absolute; top: 0; left: 0; font-size: 12pt;}
+form p br {display: none;}
+
+
+form fieldset p input,
+form fieldset p textarea {
+	display: block;
+	padding: 4px;
+	width: 250px;
+	margin: 0;
+}
+
+form fieldset p label {
+	width: 250px;
+	display: block;
+	margin: 5px 5px 5px 6px;
+	padding: 0;
+}
+
+form fieldset p textarea,
+form fieldset p input {
+	border: solid 1px #ccc;
+}
+form fieldset p label {
+	color: #777;
+}
+
+
+form, form fieldset input, form fieldset textarea, form label {
+	font-family: Helvetica, Arial;
+	font-size: 12pt;
+}
+form p { position: relative; margin: 10px 0; font-size: 12pt;display:block !important;}
+form p label { position: absolute; top: 0; left: 0; font-size: 12pt;}
+form p br {display: none;}
+
+
+form fieldset p input,
+form fieldset p textarea {
+	display: block;
+	padding: 4px;
+	width: 250px;
+	margin: 0;
+}
+
+form fieldset p label {
+	width: 250px;
+	display: block;
+	margin: 5px 5px 5px 6px;
+	padding: 0;
+}
+
+form fieldset p textarea,
+form fieldset p input {
+	border: solid 1px #ccc;
+}
+form fieldset p label {
+	color: #777;
+}
+
+
+
+@media (max-width: 720px) {
+	div.formbox {
+  width: 90%;
+ }
+  
+div.formbox .message {
+  padding: 7px 7px;
+  width: 90%;
+  background: #ece8e9;
+  border-color: #171717 #333333 #171717 #333333;
+  border-style:double;
+  border-width:1px;
+  overflow: hidden;
+  height: 150px; }
+  
+  
+  div.formbox .button {
+  margin: 0 0 10px 0;
+  padding: 4px 7px;
+  border: 0px;
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100px;
+  border-bottom: 1px double #365284;
+  border-top: 1px double #365284;
+  border-left: 1px double #476bae;
+  border-right: 1px double #365284; }
+	
+}
+.grey-input{
+	background:#fcfcfc;
+}
+.form-home input[type=text], .form-home textarea{
+	width:303px;
+}
+.form-sub input[type=text]{
+	width:250px !important;
+}
